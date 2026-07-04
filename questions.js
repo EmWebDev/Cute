@@ -107,42 +107,23 @@ const questions = [
   {
     player1Question: "What's your favorite way to receive affection?",
     player2Question: "What's their favorite way to receive affection?",
-    options: [
-      "Cuddles",
-      "Kisses",
-      "Compliments",
-      "Holding Hands"
-    ]
+    options: ["Cuddles", "Kisses", "Compliments", "Holding Hands"]
   },
   {
     player1Question: "Which surprise would make you happiest?",
     player2Question: "Which surprise would make them happiest?",
-    options: [
-      "Love Letter",
-      "Weekend Trip",
-      "Flowers",
-      "Favorite Meal"
-    ]
+    options: ["Love Letter","Weekend Trip", "Flowers","Favorite Meal"]
   },
   {
     player1Question: "What instantly makes someone more attractive to you?",
     player2Question: "What do they find most attractive?",
-    options: [
-      "Confidence",
-      "Humor",
-      "Kindness",
-      "Intelligence"
-    ]
+    options: ["Confidence", "Humor","Kindness", "Intelligence"]
   },
   {
     player1Question: "What's your ideal cuddle spot?",
     player2Question: "What's their ideal cuddle spot?",
     options: [
-      "On the Couch",
-      "In Bed",
-      "By a Fireplace",
-      "Watching the Sunset"
-    ]
+      "On the Couch","Watching the Sunset","By a Fireplace","In Bed"]
   }, 
   {
     player1Question: "What's your favorite way to spend a free weekend?",
