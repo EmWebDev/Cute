@@ -73,6 +73,176 @@ const questions = [
     player1Question: "What's your go-to movie genre?",
     player2Question: "What's their go-to movie genre?",
     options: ["Comedy", "Horror", "Romance", "Action"]
+  },
+ {
+    player1Question: "What's your go-to movie genre?",
+    player2Question: "What's their go-to movie genre?",
+    options: ["Comedy", "Horror", "Romance", "Action"]
+  },
+  {
+    player1Question: "What's your favorite season?",
+    player2Question: "What's their favorite season?",
+    options: ["Spring", "Summer", "Autumn", "Winter"]
+  },
+  {
+    player1Question: "What's your dream vacation?",
+    player2Question: "What's their dream vacation?",
+    options: ["Beach", "Mountains", "City", "Countryside"]
+  },
+  {
+    player1Question: "Which pet would you rather have?",
+    player2Question: "Which pet would they rather have?",
+    options: ["Dog", "Cat", "Bird", "Fish"]
+  },
+  {
+    player1Question: "What's your favorite type of dessert?",
+    player2Question: "What's their favorite type of dessert?",
+    options: ["Ice Cream", "Cake", "Cookies", "Chocolate"]
+  },
+  {
+    player1Question: "Which type of date feels the most romantic?",
+    player2Question: "Which type of date do they find most romantic?",
+    options:["Candlelight Dinner", "Movie Night","Beach Walk", "Stargazing"]
+  }, 
+  {
+    player1Question: "What's your favorite way to receive affection?",
+    player2Question: "What's their favorite way to receive affection?",
+    options: [
+      "Cuddles",
+      "Kisses",
+      "Compliments",
+      "Holding Hands"
+    ]
+  },
+  {
+    player1Question: "Which surprise would make you happiest?",
+    player2Question: "Which surprise would make them happiest?",
+    options: [
+      "Love Letter",
+      "Weekend Trip",
+      "Flowers",
+      "Favorite Meal"
+    ]
+  },
+  {
+    player1Question: "What instantly makes someone more attractive to you?",
+    player2Question: "What do they find most attractive?",
+    options: [
+      "Confidence",
+      "Humor",
+      "Kindness",
+      "Intelligence"
+    ]
+  },
+  {
+    player1Question: "What's your ideal cuddle spot?",
+    player2Question: "What's their ideal cuddle spot?",
+    options: [
+      "On the Couch",
+      "In Bed",
+      "By a Fireplace",
+      "Watching the Sunset"
+    ]
+  }, 
+  {
+    player1Question: "What's your favorite way to spend a free weekend?",
+    player2Question: "What's their favorite way to spend a free weekend?",
+    options: ["Relaxing at Home", "Exploring Outdoors", "Going Out with Friends", "Watching Movies"]
+  },
+  {
+    player1Question: "Which meal could you eat every day?",
+    player2Question: "Which meal could they eat every day?",
+    options: ["Pizza", "Sushi", "Burgers", "Pasta"]
+  },
+  {
+    player1Question: "What's your favorite time of day?",
+    player2Question: "What's their favorite time of day?",
+    options: ["Morning", "Afternoon", "Evening", "Late Night"]
+  },
+  {
+    player1Question: "Which superpower would you choose?",
+    player2Question: "Which superpower would they choose?",
+    options: ["Flying", "Invisibility", "Teleportation", "Reading Minds"]
+  },
+  {
+    player1Question: "What's your favorite type of weather?",
+    player2Question: "What's their favorite type of weather?",
+    options: ["Sunny", "Rainy", "Snowy", "Cloudy"]
+  },
+  {
+    player1Question: "Which drink do you usually order?",
+    player2Question: "Which drink do they usually order?",
+    options: ["Coffee", "Tea", "Soft Drink", "Water"]
+  },
+  {
+    player1Question: "What's your favorite kind of music?",
+    player2Question: "What's their favorite kind of music?",
+    options: ["Pop", "Rock", "Hip-Hop", "Country"]
+  },
+  {
+    player1Question: "Which holiday do you enjoy the most?",
+    player2Question: "Which holiday do they enjoy the most?",
+    options: ["Christmas", "Halloween", "New Year's", "Easter"]
+  },
+  {
+    player1Question: "What's your ideal way to relax after a long day?",
+    player2Question: "What's their ideal way to relax after a long day?",
+    options: ["Reading", "Gaming", "Watching TV", "Taking a Nap"]
+  },
+  {
+    player1Question: "If you could instantly learn one skill, what would it be?",
+    player2Question: "If they could instantly learn one skill, what would it be?",
+    options: ["Playing an Instrument", "Cooking", "Speaking a New Language", "Dancing"]
+  },
+  {
+    player1Question: "What's your favorite fast food restaurant?",
+    player2Question: "What's their favorite fast food restaurant?",
+    options: ["McDonald's", "Burger King", "KFC", "Subway"]
+  },
+  {
+    player1Question: "Which animal would you most like to see in the wild?",
+    player2Question: "Which animal would they most like to see in the wild?",
+    options: ["Lion", "Elephant", "Dolphin", "Penguin"]
+  },
+  {
+    player1Question: "What's your favorite ice cream flavor?",
+    player2Question: "What's their favorite ice cream flavor?",
+    options: ["Vanilla", "Chocolate", "Strawberry", "Mint Chocolate Chip"]
+  },
+  {
+    player1Question: "Which app do you use the most?",
+    player2Question: "Which app do they use the most?",
+    options: ["Instagram", "TikTok", "YouTube", "Spotify"]
+  },
+  {
+    player1Question: "What's your favorite way to stay active?",
+    player2Question: "What's their favorite way to stay active?",
+    options: ["Walking", "Gym", "Cycling", "Swimming"]
+  },
+  {
+    player1Question: "Which type of home would you rather live in?",
+    player2Question: "Which type of home would they rather live in?",
+    options: ["Beach House", "Mountain Cabin", "City Apartment", "Country Farmhouse"]
+  },
+  {
+    player1Question: "Which snack do you reach for first?",
+    player2Question: "Which snack do they reach for first?",
+    options: ["Chips", "Chocolate", "Popcorn", "Fruit"]
+  },
+  {
+    player1Question: "What's your favorite way to celebrate your birthday?",
+    player2Question: "What's their favorite way to celebrate their birthday?",
+    options: ["Big Party", "Dinner with Family", "Weekend Getaway", "Relaxing at Home"]
+  },
+  {
+    player1Question: "If you could own one luxury item, what would you choose?",
+    player2Question: "If they could own one luxury item, what would they choose?",
+    options: ["Sports Car", "Luxury Watch", "Private Yacht", "Designer Wardrobe"]
+  },
+  {
+    player1Question: "Which board game would you rather play?",
+    player2Question: "Which board game would they rather play?",
+    options: ["Monopoly", "Uno", "Chess", "Scrabble"]
   }
 
   /* ---------------------------------------------------------------
