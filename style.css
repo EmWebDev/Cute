@@ -3,9 +3,9 @@
    Change these values to re-theme the entire game.
    ===================================================================== */
 :root {
-  --pink-light: #ffe1ef;
-  --pink: #ff8fb3;
-  --pink-deep: #ff5c99;
+  --pink-light: #5A189A;
+  --pink: #3C096C;
+  --pink-deep: #240046;
 
   --blue-light: #dcefff;
   --blue: #7ec1ff;
