@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guess My Answer</title>
+
+  <!-- Fonts: Fredoka (rounded, playful display) + Nunito (friendly body text) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="stage">
+
+    <!-- ============================================================
+         SCREEN 1: CONNECT SCREEN
+         The first thing BOTH devices see. Each player types the same
+         room code and picks their own role. This is what links the
+         two separate devices together over the internet (peer.js),
+         no shared computer required.
+         ============================================================ -->
+    <section id="connect-screen" class="screen active">
+      <div class="card">
+        <p class="eyebrow">2 Players &middot; 2 Devices</p>
+        <h1 class="title">Guess My Answer</h1>
+        <p class="subtitle">
+          Agree on a room code with the other player (any word or number
+          works). Player 1 hosts first, then Player 2 joins with the same
+          code.
+        </p>
+
+        <input
+          id="room-code-input"
+          class="text-input"
+          type="text"
+          placeholder="Room code, e.g. sunshine22"
+          autocomplete="off"
+        />
+
+        <div class="options">
+          <button id="host-btn" class="option-btn role-btn pink">Host as Player 1</button>
+          <button id="join-btn" class="option-btn role-btn blue">Join as Player 2</button>
+        </div>
+
+        <p class="status-text" id="connect-status"></p>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SCREEN 2: CONNECTING / WAITING SCREEN
+         Shown while the two devices are linking up, and also reused
+         between rounds while this device is waiting on the other
+         player to take their turn.
+         ============================================================ -->
+    <section id="waiting-screen" class="screen">
+      <div class="card">
+        <div class="spinner"></div>
+        <h2 class="title" id="waiting-title">Connecting&hellip;</h2>
+        <p class="subtitle" id="waiting-subtitle">Hang tight, linking up both devices.</p>
+        <button id="waiting-cancel-btn" class="btn btn-secondary is-hidden">Back to Start</button>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SCREEN 3: QUESTION SCREEN
+         Each device only ever shows the question for ITS OWN role.
+         A Player 1 device only ever renders player1Question, a
+         Player 2 device only ever renders player2Question. Neither
+         device ever sees the other one's screen or answer.
+         ============================================================ -->
+    <section id="question-screen" class="screen">
+      <div class="card">
+        <p class="eyebrow" id="progress-label">Question 1 of 5</p>
+        <h2 class="title" id="question-text">Question goes here</h2>
+
+        <div class="options" id="options-container">
+          <!-- Option buttons are created here by script.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SCREEN 4: GAME OVER SCREEN
+         Shown on both devices once every question has been played.
+         Only a single combined total is shown — no per-player split,
+         no "who won".
+         ============================================================ -->
+    <section id="gameover-screen" class="screen">
+      <div class="card">
+        <p class="eyebrow">Game Over</p>
+        <h2 class="title">Total Points</h2>
+        <div class="final-scores">
+          <div class="score-pill total big"><span id="final-score-total">0</span> / <span id="final-score-max">0</span></div>
+        </div>
+        <p class="subtitle">Nice teamwork! Every correct guess counted toward this total.</p>
+        <button id="restart-btn" class="btn btn-primary">Play Again</button>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- PeerJS: handles the direct device-to-device connection (WebRTC)
+       using its free public broker just to help the two devices find
+       each other. No account or server of our own required. -->
+  <script src="https://unpkg.com/peerjs@1.5.4/dist/peerjs.min.js"></script>
+
+  <!-- Load order matters: questions.js must load before script.js -->
+  <script src="questions.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

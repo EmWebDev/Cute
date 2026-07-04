@@ -1,0 +1,340 @@
+/* =====================================================================
+   DESIGN TOKENS
+   Change these values to re-theme the entire game.
+   ===================================================================== */
+:root {
+  --pink-light: #ffe1ef;
+  --pink: #ff8fb3;
+  --pink-deep: #ff5c99;
+
+  --blue-light: #dcefff;
+  --blue: #7ec1ff;
+  --blue-deep: #4a9bf0;
+
+  --ink: #3a3552;
+  --white: #ffffff;
+
+  --font-display: "Fredoka", sans-serif;
+  --font-body: "Nunito", sans-serif;
+
+  --radius: 22px;
+  --shadow: 0 12px 30px rgba(120, 90, 150, 0.18);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: var(--font-body);
+  color: var(--ink);
+}
+
+/* Soft diagonal pink-to-blue backdrop, the game's signature look */
+.stage {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: linear-gradient(135deg, var(--pink-light) 0%, var(--pink-light) 45%, var(--blue-light) 55%, var(--blue-light) 100%);
+}
+
+/* =====================================================================
+   SCREENS
+   Only one .screen is visible at a time. script.js toggles the
+   "active" class to switch between them.
+   ===================================================================== */
+.screen {
+  display: none;
+  width: 100%;
+}
+
+.screen.active {
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 40px 32px;
+  max-width: 480px;
+  width: 100%;
+  text-align: center;
+  animation: pop-in 0.25s ease;
+}
+
+@keyframes pop-in {
+  from { opacity: 0; transform: translateY(10px) scale(0.98); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.eyebrow {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 13px;
+  color: var(--pink-deep);
+  margin: 0 0 10px;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 28px;
+  margin: 0 0 12px;
+  line-height: 1.25;
+}
+
+.subtitle {
+  font-size: 15px;
+  line-height: 1.5;
+  color: #6b6480;
+  margin: 0 0 26px;
+}
+
+/* =====================================================================
+   BUTTONS
+   ===================================================================== */
+.btn {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 999px;
+  padding: 14px 28px;
+  cursor: pointer;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn:focus-visible {
+  outline: 3px solid var(--blue-deep);
+  outline-offset: 3px;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--pink) 0%, var(--blue) 100%);
+  color: var(--white);
+  box-shadow: 0 8px 18px rgba(255, 92, 153, 0.3);
+}
+
+/* =====================================================================
+   QUESTION OPTIONS
+   ===================================================================== */
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.option-btn {
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 700;
+  padding: 14px 18px;
+  border-radius: 14px;
+  border: 2px solid var(--pink-light);
+  background: var(--white);
+  color: var(--ink);
+  cursor: pointer;
+  text-align: left;
+  transition: border-color 0.15s ease, background 0.15s ease, transform 0.1s ease;
+}
+
+.option-btn:hover {
+  border-color: var(--pink);
+  transform: translateX(2px);
+}
+
+.option-btn:focus-visible {
+  outline: 3px solid var(--blue-deep);
+  outline-offset: 2px;
+}
+
+.option-btn.correct {
+  background: #e4ffe9;
+  border-color: #59c97a;
+}
+
+.option-btn.wrong {
+  background: #ffe8e8;
+  border-color: #f07272;
+}
+
+/* Role-select buttons (start-of-turn "who's holding the device" screen) */
+.role-btn {
+  text-align: center;
+  font-family: var(--font-display);
+}
+
+.role-btn.pink {
+  border-color: var(--pink);
+  color: var(--pink-deep);
+}
+
+.role-btn.pink:hover {
+  background: var(--pink-light);
+}
+
+.role-btn.blue {
+  border-color: var(--blue);
+  color: var(--blue-deep);
+}
+
+.role-btn.blue:hover {
+  background: var(--blue-light);
+}
+
+/* Hidden role button (used when it isn't that player's turn yet) */
+.role-btn.is-hidden {
+  display: none;
+}
+
+/* =====================================================================
+   ROOM CODE INPUT (connect screen)
+   ===================================================================== */
+.text-input {
+  width: 100%;
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 600;
+  padding: 14px 16px;
+  border-radius: 14px;
+  border: 2px solid var(--pink-light);
+  margin-bottom: 18px;
+  color: var(--ink);
+  text-align: center;
+}
+
+.text-input:focus {
+  outline: none;
+  border-color: var(--blue);
+}
+
+.status-text {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--pink-deep);
+  min-height: 20px;
+  margin: 18px 0 0;
+}
+
+/* =====================================================================
+   SECONDARY BUTTON (e.g. "Back to Start")
+   ===================================================================== */
+.btn-secondary {
+  background: var(--white);
+  color: var(--ink);
+  border: 2px solid var(--pink-light);
+  margin-top: 18px;
+}
+
+.btn-secondary.is-hidden {
+  display: none;
+}
+
+/* =====================================================================
+   SPINNER (connecting / waiting screen)
+   ===================================================================== */
+.spinner {
+  width: 46px;
+  height: 46px;
+  margin: 0 auto 18px;
+  border-radius: 50%;
+  border: 5px solid var(--pink-light);
+  border-top-color: var(--pink-deep);
+  animation: spin 0.9s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Combined total-points pill on the game-over screen */
+.score-pill.total {
+  background: linear-gradient(135deg, var(--pink-light) 0%, var(--blue-light) 100%);
+  color: var(--ink);
+}
+
+/* =====================================================================
+   SCOREBOARD
+   ===================================================================== */
+.scoreboard {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 22px;
+  flex-wrap: wrap;
+}
+
+.score-pill {
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 999px;
+}
+
+.score-pill.pink {
+  background: var(--pink-light);
+  color: var(--pink-deep);
+}
+
+.score-pill.blue {
+  background: var(--blue-light);
+  color: var(--blue-deep);
+}
+
+.score-pill.big {
+  font-size: 18px;
+  padding: 12px 22px;
+}
+
+.final-scores {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+/* =====================================================================
+   HANDOFF SCREEN
+   ===================================================================== */
+.handoff-badge {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 22px;
+  width: 64px;
+  height: 64px;
+  line-height: 64px;
+  border-radius: 50%;
+  margin: 0 auto 18px;
+  background: linear-gradient(135deg, var(--pink) 0%, var(--blue) 100%);
+  color: var(--white);
+}
+
+.result-icon {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+/* Small screens */
+@media (max-width: 480px) {
+  .card {
+    padding: 30px 22px;
+  }
+  .title {
+    font-size: 23px;
+  }
+}
